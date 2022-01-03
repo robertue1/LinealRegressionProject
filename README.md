@@ -12,8 +12,8 @@ provide a prediction of the amount of money a movie will earn on the worldwide s
 
 ## Design
 
-To reach the prediction goal of this project, we decided to analyze features like budget, runtime, MPPA rating, the distributor, and the genres a movie belongs to.
-Since there were categorical non-ordinal features, the implementation of dummy variables was needed. Once different models' performances were compared, 
+To reach the prediction goal of this project, we decided to analyze features like budget, runtime, MPPA rating, the distributor, and the genres a movie belongs to. For the data acquisition task, web-scraping was used to obtain an initial dataset of movies, but as data was missing, I used Selenium to go over all of the movies (in the Wikipedia website) titles with missing values to try to impute the missing values. 
+Since there were categorical non-ordinal features, the implementation of dummy variables was needed. Once different models' performance were compared, 
 I chose a Lasso Regression model for making predictions and determine which factors have positive or negative correlations with the target. 
 
 ## Data
