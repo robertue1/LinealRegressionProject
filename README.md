@@ -14,7 +14,7 @@ provide a prediction of the amount of money a movie will earn on the worldwide s
 
 To reach the prediction goal of this project, we decided to analyze features like budget, runtime, MPPA rating, the distributor, and the genres a movie belongs to.
 Since there were categorical non-ordinal features, the implementation of dummy variables was needed. Once different models' performances were compared, 
-we chose Lasso as the tool for making predictions and to determine which factors have positive or negative correlations with the target. 
+I chose a Lasso Regression model for making predictions and determine which factors have positive or negative correlations with the target. 
 
 ## Data
 
@@ -43,8 +43,8 @@ Linear and Polynomial regression, Ridge and Lasso.
 
 Model Evaluation and Selection
 
-Initially, a simple train/validation/test was used for the selection of the model, but then, we used a more rigorous Cross-Validation scheme. 
-The best performing model was used, but due to the magnitude of features we were considering, a Lasso implementation was done to make the predictions. 
+Initially, a simple train/validation/test was used for the selection of the model, but then, I used a more rigorous cross-validation scheme. 
+The best performing model was used, but due to the amount of features we were considering, a Lasso Regression implementation was used to make the predictions. 
 
 
 ## Tools
