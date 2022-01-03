@@ -1,6 +1,5 @@
-# Predicting Worldwide Total Gross of movies before their release. 
-
-Roberto Linares
+# Predicting Worldwide Total Gross of movies. 
+by Roberto Linares
 
 
 
