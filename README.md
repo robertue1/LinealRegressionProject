@@ -6,24 +6,22 @@ by Roberto Linares
 ## Abstract
 
 Deciding on which movies distributions rights to acquire, is a harder task during these times of change, 
-that's why, our goal is to analyze more than 1000 movies and their lifetime performance in the worldwide box office, and determine
+that's why, my goal is to analyze more than 1000 movies and their lifetime performance in the worldwide box office, and determine
 which are the most influential factors that yield to higher numbers in the box office. The result will be a linear model that will
 provide a prediction of the amount of money a movie will earn on the worldwide scene. 
 
 ## Design
 
-To reach the prediction goal of this project, we decided to analyze features like budget, runtime, MPPA rating, the distributor, and the genres a movie belongs to. For the data acquisition task, web-scraping was used to obtain an initial dataset of movies, but as data was missing, I used Selenium to go over all of the movies (in the Wikipedia website) titles with missing values to try to impute the missing values. 
+To reach the prediction goal of this project, I decided to analyze features like budget, runtime, MPPA rating, the distributor, and the genres a movie belongs to. For the data acquisition task, web-scraping was used to obtain an initial dataset of movies, but as data was missing, I used Selenium to go over all of the movies (in the Wikipedia website) titles with missing values to impute the missing values. 
 Since there were categorical non-ordinal features, the implementation of dummy variables was needed. Once different models' performance were compared, 
-I chose a Lasso Regression model for making predictions and determine which factors have positive or negative correlations with the target. 
-
+I chose a Lasso Regression model for making predictions.
 ## Data
 
 Main sources of data for this project:
 - [BoxOfficeMojo](http://boxofficemojo.com/)
 - [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
 
-From BoxOfficeMojo we were able to extract the bulk of the data, but, as it is almost always the case, data was missing. That is why, Wikipedia was used 
-to impute the missing values. 
+From BoxOfficeMojo I was able to extract the bulk of the data, but, as it is almost always the case, data was missing. That is why, I scraped the movie titles with missing values from Wikipedia in an attempt to impute the data.
 
 One row of data for this project holds: Title, domestic opening, domestic lifetime gross, worldwide lifetime gross, budget, duration, release date, 
 distributor, and genre for each one of the movies. 
@@ -44,7 +42,7 @@ Linear and Polynomial regression, Ridge and Lasso.
 Model Evaluation and Selection
 
 Initially, a simple train/validation/test was used for the selection of the model, but then, I used a more rigorous cross-validation scheme. 
-The best performing model was used, but due to the amount of features we were considering, a Lasso Regression implementation was used to make the predictions. 
+The best performing model was used, but due to the amount of features that were considered, a Lasso Regression implementation was used to make the predictions. 
 
 
 ## Tools
